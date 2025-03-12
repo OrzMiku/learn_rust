@@ -30,3 +30,4 @@ This repository contains the code which I wrote while learning Rust. If there is
     - Return ownership
     - Borrowing (reference)
     - Immutable and mutable reference
+    - String slice

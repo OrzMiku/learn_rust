@@ -9,6 +9,7 @@
         - Return ownership
         - Borrowing (reference)
         - Immutable and mutable reference
+        - String slice
 */
 
 fn main() {
@@ -74,6 +75,24 @@ fn main() {
     let r2 = &mut s6;
     add_to_string_ref(r2);
     println!("{}", s6); // The value of s6 is modified.
+
+    // &str is a string slice. It is a reference to a string.
+    // The string slice is a reference to a string, so it does not have ownership.
+    // If you use "" to create a string, the type of the string is &str.
+    let s7 : &str = "Hello, world!";
+    
+    // &String[..] is a string slice. The type of the string slice is &str. [..] is a range to get the slice.
+    // The range is inclusive on the left and exclusive on the right. So [..5] is equal to [0, 5).
+    let s8 = &s6[..5]; // The type of s8 is &str. The value of s8 is "Hello".
+    println!("{}", s8);
+
+    // The function can return a reference.
+    let s9 = trim_string(s7);
+    println!("{}", s9);
+
+    // &String -> &str is automatically converted by the compiler.
+    let s10 = trim_string(&s6);
+    println!("{}", s10);
 }
 
 fn print_string(s: String) {
@@ -103,4 +122,8 @@ fn add_to_string_ref(s: &mut String) {
     // (*s).push_str("!"); // Rust will automatically dereference the reference, but you can also use the dereference operator.
     s.push_str("!");
     // And we don't need to return the value, because the reference does not have ownership. The original variable will be modified.
+}
+
+fn trim_string(s: &str) -> &str {
+    &s[..5]
 }
