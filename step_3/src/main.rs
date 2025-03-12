@@ -7,6 +7,8 @@
         - Move to function
         - Copy to function
         - Return ownership
+        - Borrowing (reference)
+        - Immutable and mutable reference
 */
 
 fn main() {
@@ -59,11 +61,28 @@ fn main() {
     s5 = add_to_string(s5);
     println!("{}", s5);
 
+    // The reference is declared by using &. The reference does not have ownership.
+    // Borrowing is cheaper than copying. It does not create a new value.
+    let mut s6 = String::from("Hello, world!");
+    let r1 = &s6;
+    print_string_ref(r1);
+    println!("{}", s5);
+
+    // The reference is immutable by default.
+    // add_to_string_ref(r1); // Error: r1 is immutable.
+    // Notice that mutable reference only can refer to mutable variables. If s6 is not mutable, the following code will not compile.
+    let r2 = &mut s6;
+    add_to_string_ref(r2);
+    println!("{}", s6); // The value of s6 is modified.
 }
 
 fn print_string(s: String) {
     println!("{}", s);
 } // s is dropped here.
+
+fn print_string_ref(s: &String) {
+    println!("{}", s);
+}
 
 fn print_integer(i: i32) {
     println!("{}", i);
@@ -78,3 +97,10 @@ fn add_to_string(s: String) -> String {
     let s = s + "!";
     s
 } // The ownership of s will be moved to the caller.
+
+fn add_to_string_ref(s: &mut String) {
+    // s + "!" // Error: cannot use + operator, `+` cannot be used to concatenate two `&mut String` values
+    // (*s).push_str("!"); // Rust will automatically dereference the reference, but you can also use the dereference operator.
+    s.push_str("!");
+    // And we don't need to return the value, because the reference does not have ownership. The original variable will be modified.
+}
