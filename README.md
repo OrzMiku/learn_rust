@@ -31,7 +31,7 @@ This repository contains the code which I wrote while learning Rust. If there is
     - Borrowing (reference)
     - Immutable and mutable reference
     - String slice
-- [step_3_1](step_3_1)
+- [step_4](step_4)
     - String and &str
     - String -> &str
     - &str -> String
