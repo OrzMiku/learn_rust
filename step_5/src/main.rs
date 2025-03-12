@@ -2,6 +2,7 @@
     Author: OrzMiku
     Here are:
         - Struct
+        - Tuple struct
         - Implementation
             - Constructor
             - Associated function
@@ -63,6 +64,16 @@ impl Product {
     }
 }
 
+// Tuple struct
+struct Color(u8, u8, u8);
+
+// Tuple struct implementation
+impl Color {
+    fn luminance(&self) -> f32 {
+        0.299 * self.0 as f32 + 0.587 * self.1 as f32 + 0.114 * self.2 as f32
+    }
+}
+
 fn main() {
     // Create a struct instance.
     let mut book = Product {
@@ -93,4 +104,8 @@ fn main() {
     // Create a struct instance by using the constructor.
     book = Product::new(String::from("The Rust Programming Language"), 54.99, true);
     book.buy();
+
+    let blue : Color = Color(0, 0, 255);
+    let luminance: f32 = blue.luminance();
+    println!("The luminance of blue is {}", luminance);
 }

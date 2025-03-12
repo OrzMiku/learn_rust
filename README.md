@@ -42,6 +42,7 @@ This repository contains the code which I wrote while learning Rust. If there is
     - String indexing
 - [step_5](step_5)
     - Struct
+    - Tuple struct
     - Implementation
         - Constructor
         - Associated function
