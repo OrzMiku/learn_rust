@@ -20,3 +20,13 @@ This repository contains the code which I wrote while learning Rust. If there is
     - Loop
     - While loop
     - For loop and Range
+- [step_3](step_3)
+    - Smart Pointer implementation in C++
+    - Ownership
+    - Move
+    - Copy
+    - Move to function
+    - Copy to function
+    - Return ownership
+    - Borrowing (reference)
+    - Immutable and mutable reference
