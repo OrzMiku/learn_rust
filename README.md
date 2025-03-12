@@ -40,3 +40,18 @@ This repository contains the code which I wrote while learning Rust. If there is
     - Format the string
     - Concat macro
     - String indexing
+- [step_5](step_5)
+    - Struct
+    - Implementation
+        - Constructor
+        - Associated function
+        - Method
+            - &self
+            - &mut self
+            - self
+    - Use struct
+        - Create a struct instance
+        - Access the field
+        - Change the value of the field
+        - Call the method
+        - Create a struct instance by using the constructor
