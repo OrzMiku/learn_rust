@@ -31,3 +31,12 @@ This repository contains the code which I wrote while learning Rust. If there is
     - Borrowing (reference)
     - Immutable and mutable reference
     - String slice
+- [step_3_1](step_3_1)
+    - String and &str
+    - String -> &str
+    - &str -> String
+    - Modify the string
+    - Concatenate the string
+    - Format the string
+    - Concat macro
+    - String indexing
