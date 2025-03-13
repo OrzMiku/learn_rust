@@ -56,3 +56,11 @@ This repository contains the code which I wrote while learning Rust. If there is
         - Change the value of the field
         - Call the method
         - Create a struct instance by using the constructor
+- [Step_6](step_6)
+    - Enum
+    - Enum Implementation
+        - Usage of match in enum implementation
+    - Use enum
+        - Create a enum instance
+        - Use enum in the struct
+        - Call the method of the enum instance
