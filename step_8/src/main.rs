@@ -7,6 +7,16 @@
     Run this crate: cargo run --bin step_8
 */
 
+use step_8::auth_utils::models::Credentials;
+use step_8::authenticate;
+
 fn main() {
-    println!("This is a binary crate");
+    let username = "username".to_string();
+    let password = "password".to_string();
+    let creds = Credentials::new(username, password);
+    let result = authenticate(creds);
+    match result {
+        Ok(msg) => println!("{}", msg),
+        Err(msg) => println!("{}", msg),
+    }
 }

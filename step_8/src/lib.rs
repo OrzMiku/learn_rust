@@ -19,45 +19,11 @@
 
 #![allow(dead_code, unused_variables)]
 
-mod database {
-    pub enum Status {
-        Connected,
-        Interrupted
-    }
-    
-    pub fn connect_to_database() -> Status {
-        return Status::Connected;
-    }
-
-    pub fn get_user() {
-        // ...Get the user
-    }
-}
-
-mod auth_utils {
-    // You can use relative paths to refer to the parent module
-    pub fn login(creds : models::Credentials) {
-        // ...Authenticate the user
-
-        // You can also use super to refer to the parent module
-        // super::database::get_user();
-
-        // Or you can use the full path
-        // crate:: is an absolute path that starts from the crate root
-        crate::database::get_user();
-    }
-    
-    fn logout() {
-        // ...Logout the user
-    }
-
-    pub(crate) mod models {
-        pub struct Credentials {
-            username: String,
-            password: String,
-        }
-    }
-}
+// The mod keyword is used to define a module.
+// Although the module system is not based on the file system, it is a good practice to create a module in a separate file.
+// When you create a module in a separate file, you still need to use the mod keyword to define the module.
+mod database; // database/mod.rs is a way to organize the code.
+pub mod auth_utils; // auth_utils.rs is a another way to organize the code.
 
 // The use keyword brings a path into scope
 // It is similar to the import keyword in other languages
@@ -66,10 +32,11 @@ use auth_utils::login;
 use database::Status;
 use auth_utils::models::Credentials;
 
-pub fn authenticate(creds : Credentials) {
+pub fn authenticate(creds : Credentials) -> Result<String, String> {
     if let Status::Connected = connect_to_database() {
         login(creds);
+        return Ok(String::from("Successfully authenticated."));
     } else {
-        panic!("Failed to connect to the database");
+        return Err(String::from("Cannot connect to the database."));
     }
 }

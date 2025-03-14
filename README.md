@@ -76,3 +76,5 @@ This repository contains the code which I wrote while learning Rust. If there is
     - Move the ownership of the vector
 - [step_8](step_8)
     - Crate and module
+    - Organize the code in the module
+    - Use the module in the main.rs
