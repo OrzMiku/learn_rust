@@ -2,15 +2,9 @@
 
 This repository contains the code which I wrote while learning Rust. If there is any mistake in the code or explanation, please let me know. I will be happy to correct it.
 
-## Run the code
-
-```bash
-cargo run --bin step_x
-```
-
 ## Index
 
-- [step_1](src/bin/step_1.rs)
+- [step_1](step_1)
     - Hello World
     - Variables
     - Mutability
@@ -20,14 +14,14 @@ cargo run --bin step_x
     - Arrays
     - Tuples
     - Unit Tuple
-- [step_2](src/bin/step_2.rs)
+- [step_2](step_2)
     - Function and function call
     - If Else Statement
     - Loop
     - While loop
     - For loop and Range
-- [step_3](src/bin/step_3.rs)
-    - [Smart Pointer implementation in C++](src/others/step_3/raii_cpp)
+- [step_3](step_3)
+    - Smart Pointer implementation in C++
     - Ownership
     - Move
     - Copy
@@ -37,7 +31,7 @@ cargo run --bin step_x
     - Borrowing (reference)
     - Immutable and mutable reference
     - String slice
-- [step_4](src/bin/step_4.rs)
+- [step_4](step_4)
     - String and &str
     - String -> &str
     - &str -> String
@@ -46,7 +40,7 @@ cargo run --bin step_x
     - Format the string
     - Concat macro
     - String indexing
-- [step_5](src/bin/step_5.rs)
+- [step_5](step_5)
     - Struct
     - Tuple struct
     - Implementation
@@ -62,7 +56,7 @@ cargo run --bin step_x
         - Change the value of the field
         - Call the method
         - Create a struct instance by using the constructor
-- [step_6](src/bin/step_6.rs)
+- [step_6](step_6)
     - Enum
     - Enum Implementation
         - Usage of match in enum implementation
@@ -72,7 +66,7 @@ cargo run --bin step_x
         - Call the method of the enum instance
     - Option enum
     - Result enum
-- [step_7](src/bin/step_7.rs)
+- [step_7](step_7)
     - Create a vector 
     - Add elements to the vector
     - Access the element of the vector
@@ -81,5 +75,4 @@ cargo run --bin step_x
     - Iterate over the vector
     - Move the ownership of the vector
 - [step_8](step_8)
-    - Binary Crate and Library Crate
-    - Module System
+    - Crate and module
