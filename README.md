@@ -74,3 +74,6 @@ This repository contains the code which I wrote while learning Rust. If there is
         - Use the get method
     - Iterate over the vector
     - Move the ownership of the vector
+- [step_8](step_8)
+    - Binary Crate and Library Crate
+    - Module System
