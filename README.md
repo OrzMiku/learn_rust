@@ -64,3 +64,4 @@ This repository contains the code which I wrote while learning Rust. If there is
         - Create a enum instance
         - Use enum in the struct
         - Call the method of the enum instance
+    - Option enum

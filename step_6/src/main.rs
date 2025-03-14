@@ -8,6 +8,7 @@
             - Create a enum instance
             - Use enum in the struct
             - Call the method of the enum instance
+        - Option enum
 */
 
 struct Product {
@@ -67,6 +68,15 @@ impl Command {
     }
 }
 
+// Option is a generic enum with two variants: Some<T> and None.
+fn get_username(user_id: i32) -> Option<String> {
+    if user_id == 1 {
+        Some(String::from("OrzMiku"))
+    } else {
+        None
+    }
+}
+
 fn main() {
     // Use :: to access the item of the enum.
     let categroy = Categroy::Electrics;
@@ -106,4 +116,15 @@ fn main() {
     println!("{}", cmd_redo.serialize());
     println!("{}", cmd_move_cursor.serialize());
     println!("{}", cmd_replace.serialize());
+
+    // Use Option to handle the situation that the function may return null.
+    match get_username(2) {
+        Some(username) => println!("Username: {}", username),
+        None => println!("User not found")
+    }
+
+    // If you only care about one case, you can use if let to simplify the code.
+    if let Some(name) = get_username(1) {
+        println!("Username: {}", name);
+    }
 }
