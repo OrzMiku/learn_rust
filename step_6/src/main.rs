@@ -9,6 +9,7 @@
             - Use enum in the struct
             - Call the method of the enum instance
         - Option enum
+        - Result enum
 */
 
 struct Product {
@@ -77,6 +78,34 @@ fn get_username(user_id: i32) -> Option<String> {
     }
 }
 
+fn get_username_dbquery(user_id: i32) -> Option<String> {
+    let mut query : String = format!("SELECT username FROM users WHERE id = {}", user_id);
+    
+    // Simulate the situation that the query is empty.
+    if user_id == 2 {
+        query = String::from("");
+    }
+
+    let result = db_query(query);
+    match result {
+        Ok(username) => Some(username),
+        Err(msg) => {
+            println!("{}", msg);
+            None
+        }
+    }
+}
+
+// Result is a generic enum with two variants: Ok<T> and Err<E>.
+// It is used to handle the situation that the function may return an error.
+fn db_query(query : String) -> Result<String, String> {
+    if query.is_empty() {
+        return Err(String::from("Query is empty"));
+    } else {
+        return Ok(String::from("OrzMiku"));
+    }
+}
+
 fn main() {
     // Use :: to access the item of the enum.
     let categroy = Categroy::Electrics;
@@ -88,12 +117,14 @@ fn main() {
         price: 1000.0,
         in_stock: true
     };
+
     let product_2 = Product {
         name: String::from("T-shirt"),
         categroy: Categroy::Clothing,
         price: 20.0,
         in_stock: false
     };
+    
     let product_3 = Product {
         name: String::from("Rust Programming"),
         categroy: Categroy::Book,
@@ -125,6 +156,19 @@ fn main() {
 
     // If you only care about one case, you can use if let to simplify the code.
     if let Some(name) = get_username(1) {
+        println!("Username: {}", name);
+    }
+
+    let username = get_username_dbquery(1);
+    if let Some(name) = username {
+        println!("Username: {}", name);
+    }
+
+    let username = get_username_dbquery(2);
+
+    // Because the query is empty, the query function will return an error.
+    // And Some(username) will not be executed.
+    if let Some(name) = username {
         println!("Username: {}", name);
     }
 }
