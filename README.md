@@ -78,3 +78,4 @@ This repository contains the code which I wrote while learning Rust. If there is
     - Crate and module
     - Organize the code in the module
     - Use the module in the main.rs
+    - Use the external crate

@@ -32,7 +32,14 @@ use auth_utils::login;
 use database::Status;
 use auth_utils::models::Credentials;
 
+// Rand is an external dependency, you need to add it manually in the Cargo.toml or use the command cargo add rand
+use rand::Rng;
+
 pub fn authenticate(creds : Credentials) -> Result<String, String> {
+    let mut rng = rand::rng();
+    let timeout = rng.random_range(100..=500);
+    println!("Timeout: {}", timeout);
+
     if let Status::Connected = connect_to_database() {
         login(creds);
         return Ok(String::from("Successfully authenticated."));
