@@ -1,0 +1,20 @@
+[package]
+name = "draw"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+# In Cargo, features are a way to conditionally compile code.
+# This is useful when you want to have different behavior depending on the features enabled.
+# The optional keyword is used to specify that the dependency is not required.
+rgb = { version = "0.8.50", features = ["serde"], optional = true }
+serde = { version = "1.0.219", features = ["derive"], optional = true }
+
+# Features are disabled by default. You can use the default keyword to enable them by default.
+[features]
+default = ["color"]
+# deps: is a prefix that indicates that the feature is provided by a dependency.
+# It can be ommited if the name of the dependency is different from any features.
+color = ["dep:rgb"]
+shapes = ["color", "serde"]

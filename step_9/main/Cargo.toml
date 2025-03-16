@@ -1,0 +1,10 @@
+[package]
+name = "main"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# In draw, color is enabled by default, shapes is disabled by default.
+draw = { path = "../draw", features = ["shapes"] }
+# The color feature is enabled by default in draw. But we can disable the default features.
+# draw = { path = "../draw", default-features = false, features = ["shapes"] }

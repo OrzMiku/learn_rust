@@ -79,3 +79,5 @@ This repository contains the code which I wrote while learning Rust. If there is
     - Organize the code in the module
     - Use the module in the main.rs
     - Use the external crate
+- [step_9](step_9)
+    - Feature flag (conditional compilation)
