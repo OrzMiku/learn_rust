@@ -82,4 +82,7 @@ This repository contains the code which I wrote while learning Rust. If there is
 - [step_9](step_9)
     - Feature flag (conditional compilation)
 - [step_10](step_10): Cargo workspace
-- [step_11](step_11): Unit test
+- [step_11](step_11)
+    - Unit test
+    - Integration test
+    - Use module for integration test

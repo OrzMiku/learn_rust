@@ -40,6 +40,7 @@ impl SavingsAccount {
     }
 }
 
+// Unit tests for the SavingsAccount struct
 #[cfg(test)]
 mod tests {
     use super::*;
