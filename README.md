@@ -81,3 +81,5 @@ This repository contains the code which I wrote while learning Rust. If there is
     - Use the external crate
 - [step_9](step_9)
     - Feature flag (conditional compilation)
+- [step_10](step_10)
+    - Virtual workspaces

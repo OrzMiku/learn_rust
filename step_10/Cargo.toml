@@ -1,0 +1,16 @@
+# Virtual manifest for the workspace
+[workspace]
+members = [
+    "blog_api",
+    "blog_web",
+    "blog_shared"
+]
+
+# If using a virtual workspace, the version should be specified in the [workspace] table.
+# "1" (default)
+# "2" (edition = "2021" default)
+# "3" (edition = "2024")
+resolver = "3"
+
+# Runing `cargo build` will build all the members in the workspace.
+# You can also run `cargo build -p <package_name>` to build a specific package.
