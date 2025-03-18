@@ -1,8 +1,22 @@
+/// A savings account
 pub struct SavingsAccount {
     balance: i32,
 }
 
 impl SavingsAccount {
+    // This is a documentation comment, which can be used to generate documentation pages
+    // To generate documentation, run `cargo doc --open`
+    // You can use `///` to write documentation comments (Support Markdown)
+    /// Create a new `SavingsAccount` with a starting balance of zero
+    /// 
+    /// # Examples
+    /// 
+    /// ```
+    /// use step_11::SavingsAccount;
+    /// let account = SavingsAccount::new();
+    /// assert_eq!(account.get(), 0, "Expected starting balance to be 0");
+    /// ```
+    // The code block above will be compiled and run as a doctest
     pub fn new() -> Self {
         SavingsAccount { balance: 0 }
         // SavingsAccount { balance: 100 } // The test `should_have_a_starting_balance_of_0` will fail if this line is uncommented
