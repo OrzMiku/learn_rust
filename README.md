@@ -86,3 +86,9 @@ This repository contains the code which I wrote while learning Rust. If there is
     - Unit test
     - Integration test
     - Use module for integration test
+- [step_12](step_12): Generics
+- [step_13](step_13)
+    - Trait and super trait
+    - Trait implementation
+    - Trait bound
+    - Dynamic dispatch
