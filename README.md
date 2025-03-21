@@ -101,3 +101,4 @@ This repository contains the code which I wrote while learning Rust. If there is
   - Box smart pointer
   - Rc smart pointer
   - RefCell smart pointer
+  - Deref and DerefMut trait
