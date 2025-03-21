@@ -99,3 +99,4 @@ This repository contains the code which I wrote while learning Rust. If there is
   - Lifetime elision
 - [step_15](step_15)
   - Box smart pointer
+  - Rc smart pointer
