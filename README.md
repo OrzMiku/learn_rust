@@ -102,3 +102,7 @@ This repository contains the code which I wrote while learning Rust. If there is
   - Rc smart pointer
   - RefCell smart pointer
   - Deref and DerefMut trait
+- [step_16](step_16)
+  - Panic (unrecoverable error)
+  - Result (recoverable error)
+  - Propagate the error
