@@ -106,3 +106,6 @@ This repository contains the code which I wrote while learning Rust. If there is
   - Panic (unrecoverable error)
   - Result (recoverable error)
   - Propagate the error
+  - Multiple error type
+  - Error handling
+  - Custom error
