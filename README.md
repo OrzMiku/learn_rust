@@ -118,3 +118,4 @@ This repository contains the code which I wrote while learning Rust. If there is
     - IntoIterator trait
     - Traverse the iterator
   - Iterating over collections
+  - Combinator
