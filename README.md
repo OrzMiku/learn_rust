@@ -112,3 +112,9 @@ This repository contains the code which I wrote while learning Rust. If there is
 - [step_17](step_17)
   - Closure
   - Function Pointer
+- [step_18](step_18)
+  - Iterator
+    - Iterator trait
+    - IntoIterator trait
+    - Traverse the iterator
+  - Iterating over collections
