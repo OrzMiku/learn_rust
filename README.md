@@ -110,4 +110,5 @@ This repository contains the code which I wrote while learning Rust. If there is
   - Error handling
   - Custom error
 - [step_17](step_17)
-  - Closures
+  - Closure
+  - Function Pointer
