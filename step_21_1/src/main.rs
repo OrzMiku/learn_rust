@@ -11,4 +11,12 @@ fn main() {
     for _ in 0..30 {
         db.connect();
     }
+
+    let result = add(1, 2);
+    println!("Result: {}", result);
+}
+
+#[show_attribute_stream(arg1, arg2)]
+fn add(x: i32, y: i32) -> i32 {
+    x + y
 }

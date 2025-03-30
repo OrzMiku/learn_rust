@@ -63,3 +63,10 @@ pub fn log_derive(input: TokenStream) -> TokenStream {
     
     log_impl.into()
 }
+
+#[proc_macro_attribute]
+pub fn show_attribute_stream(attr: TokenStream, item: TokenStream) -> TokenStream {
+    println!("Attribute: {}", attr.to_string());
+    println!("Item: {}", item.to_string());
+    item
+}
