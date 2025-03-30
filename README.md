@@ -131,3 +131,7 @@ This repository contains the code which I wrote while learning Rust. If there is
   - Function-like macros
   - Derive macros
   - Attribute macros
+- [step_22](step_22)
+  - Unsafe Rust
+    - Basic usage
+    - Assemble in Rust
