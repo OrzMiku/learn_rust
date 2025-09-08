@@ -1,3 +1,5 @@
+**This repository contains many errors and is not recommended as a learning reference. I have recently resumed learning Rust and will check and revise it again.**
+
 # Learn Rust
 
 This repository contains the code which I wrote while learning Rust. If there is any mistake in the code or explanation, please let me know. I will be happy to correct it.
